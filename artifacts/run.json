@@ -1,0 +1,680 @@
+{
+  "case_count": 8,
+  "cases": [
+    {
+      "control_single_view": {
+        "extras": [
+          "project.edit"
+        ],
+        "footprint": [
+          "project.edit",
+          "summary.read"
+        ],
+        "grant": [
+          "project_editor"
+        ],
+        "risk": {
+          "admin": 0,
+          "operations": 2,
+          "services": 1,
+          "writes": 1
+        }
+      },
+      "distinct_sufficient_footprints": 3,
+      "explicit_preferences": {
+        "admin": [
+          [
+            "organization_reader"
+          ],
+          [
+            "project_editor"
+          ]
+        ],
+        "operations": [
+          [
+            "project_editor"
+          ]
+        ],
+        "services": [
+          [
+            "project_editor"
+          ]
+        ],
+        "writes": [
+          [
+            "organization_reader"
+          ]
+        ]
+      },
+      "id": "tradeoff",
+      "incomparability_witnesses": [
+        {
+          "left": [
+            "organization_reader"
+          ],
+          "left_only": [
+            "billing.read",
+            "directory.read"
+          ],
+          "right": [
+            "project_editor"
+          ],
+          "right_only": [
+            "project.edit"
+          ]
+        }
+      ],
+      "intervention_all_minima": [
+        {
+          "extras": [
+            "billing.read",
+            "directory.read"
+          ],
+          "footprint": [
+            "billing.read",
+            "directory.read",
+            "summary.read"
+          ],
+          "grant": [
+            "organization_reader"
+          ],
+          "risk": {
+            "admin": 0,
+            "operations": 3,
+            "services": 3,
+            "writes": 0
+          }
+        },
+        {
+          "extras": [
+            "project.edit"
+          ],
+          "footprint": [
+            "project.edit",
+            "summary.read"
+          ],
+          "grant": [
+            "project_editor"
+          ],
+          "risk": {
+            "admin": 0,
+            "operations": 2,
+            "services": 1,
+            "writes": 1
+          }
+        }
+      ],
+      "risk_dominated_minima": [],
+      "scope_subsets_enumerated": 4,
+      "status": "incomparable_minima",
+      "sufficient_grants": 3,
+      "task": [
+        "summary.read"
+      ]
+    },
+    {
+      "control_single_view": {
+        "extras": [],
+        "footprint": [
+          "summary.read"
+        ],
+        "grant": [
+          "summary_only"
+        ],
+        "risk": {
+          "admin": 0,
+          "operations": 1,
+          "services": 1,
+          "writes": 0
+        }
+      },
+      "distinct_sufficient_footprints": 4,
+      "explicit_preferences": {
+        "admin": [
+          [
+            "summary_only"
+          ]
+        ],
+        "operations": [
+          [
+            "summary_only"
+          ]
+        ],
+        "services": [
+          [
+            "summary_only"
+          ]
+        ],
+        "writes": [
+          [
+            "summary_only"
+          ]
+        ]
+      },
+      "id": "exact_task_scope",
+      "incomparability_witnesses": [],
+      "intervention_all_minima": [
+        {
+          "extras": [],
+          "footprint": [
+            "summary.read"
+          ],
+          "grant": [
+            "summary_only"
+          ],
+          "risk": {
+            "admin": 0,
+            "operations": 1,
+            "services": 1,
+            "writes": 0
+          }
+        }
+      ],
+      "risk_dominated_minima": [],
+      "scope_subsets_enumerated": 8,
+      "status": "unique_least",
+      "sufficient_grants": 7,
+      "task": [
+        "summary.read"
+      ]
+    },
+    {
+      "control_single_view": {
+        "extras": [
+          "project.edit"
+        ],
+        "footprint": [
+          "project.edit",
+          "summary.read"
+        ],
+        "grant": [
+          "project_editor"
+        ],
+        "risk": {
+          "admin": 0,
+          "operations": 2,
+          "services": 1,
+          "writes": 1
+        }
+      },
+      "distinct_sufficient_footprints": 3,
+      "explicit_preferences": {
+        "admin": [
+          [
+            "organization_reader"
+          ],
+          [
+            "project_editor"
+          ]
+        ],
+        "operations": [
+          [
+            "project_editor"
+          ]
+        ],
+        "services": [
+          [
+            "project_editor"
+          ]
+        ],
+        "writes": [
+          [
+            "organization_reader"
+          ]
+        ]
+      },
+      "id": "aliases",
+      "incomparability_witnesses": [
+        {
+          "left": [
+            "organization_reader"
+          ],
+          "left_only": [
+            "billing.read",
+            "directory.read"
+          ],
+          "right": [
+            "project_editor"
+          ],
+          "right_only": [
+            "project.edit"
+          ]
+        }
+      ],
+      "intervention_all_minima": [
+        {
+          "extras": [
+            "billing.read",
+            "directory.read"
+          ],
+          "footprint": [
+            "billing.read",
+            "directory.read",
+            "summary.read"
+          ],
+          "grant": [
+            "organization_reader"
+          ],
+          "risk": {
+            "admin": 0,
+            "operations": 3,
+            "services": 3,
+            "writes": 0
+          }
+        },
+        {
+          "extras": [
+            "project.edit"
+          ],
+          "footprint": [
+            "project.edit",
+            "summary.read"
+          ],
+          "grant": [
+            "project_editor"
+          ],
+          "risk": {
+            "admin": 0,
+            "operations": 2,
+            "services": 1,
+            "writes": 1
+          }
+        }
+      ],
+      "risk_dominated_minima": [],
+      "scope_subsets_enumerated": 8,
+      "status": "incomparable_minima",
+      "sufficient_grants": 7,
+      "task": [
+        "summary.read"
+      ]
+    },
+    {
+      "control_single_view": {
+        "extras": [],
+        "footprint": [
+          "directory.read",
+          "summary.read"
+        ],
+        "grant": [
+          "read_directory",
+          "read_summary"
+        ],
+        "risk": {
+          "admin": 0,
+          "operations": 2,
+          "services": 2,
+          "writes": 0
+        }
+      },
+      "distinct_sufficient_footprints": 2,
+      "explicit_preferences": {
+        "admin": [
+          [
+            "read_directory",
+            "read_summary"
+          ]
+        ],
+        "operations": [
+          [
+            "read_directory",
+            "read_summary"
+          ]
+        ],
+        "services": [
+          [
+            "read_directory",
+            "read_summary"
+          ]
+        ],
+        "writes": [
+          [
+            "read_directory",
+            "read_summary"
+          ]
+        ]
+      },
+      "id": "scope_names_are_not_authority",
+      "incomparability_witnesses": [],
+      "intervention_all_minima": [
+        {
+          "extras": [],
+          "footprint": [
+            "directory.read",
+            "summary.read"
+          ],
+          "grant": [
+            "read_directory",
+            "read_summary"
+          ],
+          "risk": {
+            "admin": 0,
+            "operations": 2,
+            "services": 2,
+            "writes": 0
+          }
+        }
+      ],
+      "risk_dominated_minima": [],
+      "scope_subsets_enumerated": 8,
+      "status": "unique_least",
+      "sufficient_grants": 5,
+      "task": [
+        "directory.read",
+        "summary.read"
+      ]
+    },
+    {
+      "control_single_view": {
+        "extras": [
+          "directory.read"
+        ],
+        "footprint": [
+          "directory.read",
+          "summary.read"
+        ],
+        "grant": [
+          "left"
+        ],
+        "risk": {
+          "admin": 0,
+          "operations": 2,
+          "services": 2,
+          "writes": 0
+        }
+      },
+      "distinct_sufficient_footprints": 3,
+      "explicit_preferences": {
+        "admin": [
+          [
+            "right"
+          ],
+          [
+            "left"
+          ]
+        ],
+        "operations": [
+          [
+            "right"
+          ],
+          [
+            "left"
+          ]
+        ],
+        "services": [
+          [
+            "right"
+          ],
+          [
+            "left"
+          ]
+        ],
+        "writes": [
+          [
+            "right"
+          ],
+          [
+            "left"
+          ]
+        ]
+      },
+      "id": "equal_metrics_different_operations",
+      "incomparability_witnesses": [
+        {
+          "left": [
+            "right"
+          ],
+          "left_only": [
+            "billing.read"
+          ],
+          "right": [
+            "left"
+          ],
+          "right_only": [
+            "directory.read"
+          ]
+        }
+      ],
+      "intervention_all_minima": [
+        {
+          "extras": [
+            "billing.read"
+          ],
+          "footprint": [
+            "billing.read",
+            "summary.read"
+          ],
+          "grant": [
+            "right"
+          ],
+          "risk": {
+            "admin": 0,
+            "operations": 2,
+            "services": 2,
+            "writes": 0
+          }
+        },
+        {
+          "extras": [
+            "directory.read"
+          ],
+          "footprint": [
+            "directory.read",
+            "summary.read"
+          ],
+          "grant": [
+            "left"
+          ],
+          "risk": {
+            "admin": 0,
+            "operations": 2,
+            "services": 2,
+            "writes": 0
+          }
+        }
+      ],
+      "risk_dominated_minima": [],
+      "scope_subsets_enumerated": 4,
+      "status": "incomparable_minima",
+      "sufficient_grants": 3,
+      "task": [
+        "summary.read"
+      ]
+    },
+    {
+      "control_single_view": {
+        "extras": [
+          "directory.read"
+        ],
+        "footprint": [
+          "directory.read",
+          "summary.read"
+        ],
+        "grant": [
+          "left"
+        ],
+        "risk": {
+          "admin": 0,
+          "operations": 2,
+          "services": 2,
+          "writes": 0
+        }
+      },
+      "distinct_sufficient_footprints": 3,
+      "explicit_preferences": {
+        "admin": [
+          [
+            "right"
+          ],
+          [
+            "left"
+          ]
+        ],
+        "operations": [
+          [
+            "left"
+          ]
+        ],
+        "services": [
+          [
+            "right"
+          ],
+          [
+            "left"
+          ]
+        ],
+        "writes": [
+          [
+            "left"
+          ]
+        ]
+      },
+      "id": "risk_dominance_not_containment",
+      "incomparability_witnesses": [
+        {
+          "left": [
+            "right"
+          ],
+          "left_only": [
+            "billing.read",
+            "project.edit"
+          ],
+          "right": [
+            "left"
+          ],
+          "right_only": [
+            "directory.read"
+          ]
+        }
+      ],
+      "intervention_all_minima": [
+        {
+          "extras": [
+            "billing.read",
+            "project.edit"
+          ],
+          "footprint": [
+            "billing.read",
+            "project.edit",
+            "summary.read"
+          ],
+          "grant": [
+            "right"
+          ],
+          "risk": {
+            "admin": 0,
+            "operations": 3,
+            "services": 2,
+            "writes": 1
+          }
+        },
+        {
+          "extras": [
+            "directory.read"
+          ],
+          "footprint": [
+            "directory.read",
+            "summary.read"
+          ],
+          "grant": [
+            "left"
+          ],
+          "risk": {
+            "admin": 0,
+            "operations": 2,
+            "services": 2,
+            "writes": 0
+          }
+        }
+      ],
+      "risk_dominated_minima": [
+        {
+          "by": [
+            "left"
+          ],
+          "grant": [
+            "right"
+          ]
+        }
+      ],
+      "scope_subsets_enumerated": 4,
+      "status": "incomparable_minima",
+      "sufficient_grants": 3,
+      "task": [
+        "summary.read"
+      ]
+    },
+    {
+      "control_single_view": null,
+      "distinct_sufficient_footprints": 0,
+      "explicit_preferences": {
+        "admin": [],
+        "operations": [],
+        "services": [],
+        "writes": []
+      },
+      "id": "infeasible",
+      "incomparability_witnesses": [],
+      "intervention_all_minima": [],
+      "risk_dominated_minima": [],
+      "scope_subsets_enumerated": 2,
+      "status": "infeasible",
+      "sufficient_grants": 0,
+      "task": [
+        "billing.read"
+      ]
+    },
+    {
+      "control_single_view": {
+        "extras": [],
+        "footprint": [],
+        "grant": [],
+        "risk": {
+          "admin": 0,
+          "operations": 0,
+          "services": 0,
+          "writes": 0
+        }
+      },
+      "distinct_sufficient_footprints": 4,
+      "explicit_preferences": {
+        "admin": [
+          []
+        ],
+        "operations": [
+          []
+        ],
+        "services": [
+          []
+        ],
+        "writes": [
+          []
+        ]
+      },
+      "id": "empty_task",
+      "incomparability_witnesses": [],
+      "intervention_all_minima": [
+        {
+          "extras": [],
+          "footprint": [],
+          "grant": [],
+          "risk": {
+            "admin": 0,
+            "operations": 0,
+            "services": 0,
+            "writes": 0
+          }
+        }
+      ],
+      "risk_dominated_minima": [],
+      "scope_subsets_enumerated": 4,
+      "status": "unique_least",
+      "sufficient_grants": 4,
+      "task": []
+    }
+  ],
+  "executed_operations": 0,
+  "kind": "synthetic_exact_enumeration",
+  "model_calls": 0,
+  "schema_version": 1
+}

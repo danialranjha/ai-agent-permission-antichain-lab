@@ -1,0 +1,317 @@
+[
+  {
+    "id": "tradeoff",
+    "operations": {
+      "billing.read": {
+        "admin": false,
+        "service": "billing",
+        "write": false
+      },
+      "directory.read": {
+        "admin": false,
+        "service": "directory",
+        "write": false
+      },
+      "project.edit": {
+        "admin": false,
+        "service": "project",
+        "write": true
+      },
+      "summary.read": {
+        "admin": false,
+        "service": "project",
+        "write": false
+      }
+    },
+    "scopes": {
+      "organization_reader": [
+        "summary.read",
+        "directory.read",
+        "billing.read"
+      ],
+      "project_editor": [
+        "summary.read",
+        "project.edit"
+      ]
+    },
+    "task": [
+      "summary.read"
+    ]
+  },
+  {
+    "id": "exact_task_scope",
+    "operations": {
+      "billing.read": {
+        "admin": false,
+        "service": "billing",
+        "write": false
+      },
+      "directory.read": {
+        "admin": false,
+        "service": "directory",
+        "write": false
+      },
+      "project.edit": {
+        "admin": false,
+        "service": "project",
+        "write": true
+      },
+      "summary.read": {
+        "admin": false,
+        "service": "project",
+        "write": false
+      }
+    },
+    "scopes": {
+      "organization_reader": [
+        "summary.read",
+        "directory.read",
+        "billing.read"
+      ],
+      "project_editor": [
+        "summary.read",
+        "project.edit"
+      ],
+      "summary_only": [
+        "summary.read"
+      ]
+    },
+    "task": [
+      "summary.read"
+    ]
+  },
+  {
+    "id": "aliases",
+    "operations": {
+      "billing.read": {
+        "admin": false,
+        "service": "billing",
+        "write": false
+      },
+      "directory.read": {
+        "admin": false,
+        "service": "directory",
+        "write": false
+      },
+      "project.edit": {
+        "admin": false,
+        "service": "project",
+        "write": true
+      },
+      "summary.read": {
+        "admin": false,
+        "service": "project",
+        "write": false
+      }
+    },
+    "scopes": {
+      "organization_reader": [
+        "summary.read",
+        "directory.read",
+        "billing.read"
+      ],
+      "project_editor": [
+        "summary.read",
+        "project.edit"
+      ],
+      "reader_alias": [
+        "summary.read",
+        "directory.read",
+        "billing.read"
+      ]
+    },
+    "task": [
+      "summary.read"
+    ]
+  },
+  {
+    "id": "scope_names_are_not_authority",
+    "operations": {
+      "billing.read": {
+        "admin": false,
+        "service": "billing",
+        "write": false
+      },
+      "directory.read": {
+        "admin": false,
+        "service": "directory",
+        "write": false
+      },
+      "project.edit": {
+        "admin": false,
+        "service": "project",
+        "write": true
+      },
+      "summary.read": {
+        "admin": false,
+        "service": "project",
+        "write": false
+      }
+    },
+    "scopes": {
+      "broad": [
+        "summary.read",
+        "directory.read",
+        "project.edit"
+      ],
+      "read_directory": [
+        "directory.read"
+      ],
+      "read_summary": [
+        "summary.read"
+      ]
+    },
+    "task": [
+      "summary.read",
+      "directory.read"
+    ]
+  },
+  {
+    "id": "equal_metrics_different_operations",
+    "operations": {
+      "billing.read": {
+        "admin": false,
+        "service": "directory",
+        "write": false
+      },
+      "directory.read": {
+        "admin": false,
+        "service": "directory",
+        "write": false
+      },
+      "project.edit": {
+        "admin": false,
+        "service": "project",
+        "write": true
+      },
+      "summary.read": {
+        "admin": false,
+        "service": "project",
+        "write": false
+      }
+    },
+    "scopes": {
+      "left": [
+        "summary.read",
+        "directory.read"
+      ],
+      "right": [
+        "summary.read",
+        "billing.read"
+      ]
+    },
+    "task": [
+      "summary.read"
+    ]
+  },
+  {
+    "id": "risk_dominance_not_containment",
+    "operations": {
+      "billing.read": {
+        "admin": false,
+        "service": "billing",
+        "write": false
+      },
+      "directory.read": {
+        "admin": false,
+        "service": "directory",
+        "write": false
+      },
+      "project.edit": {
+        "admin": false,
+        "service": "project",
+        "write": true
+      },
+      "summary.read": {
+        "admin": false,
+        "service": "project",
+        "write": false
+      }
+    },
+    "scopes": {
+      "left": [
+        "summary.read",
+        "directory.read"
+      ],
+      "right": [
+        "summary.read",
+        "billing.read",
+        "project.edit"
+      ]
+    },
+    "task": [
+      "summary.read"
+    ]
+  },
+  {
+    "id": "infeasible",
+    "operations": {
+      "billing.read": {
+        "admin": false,
+        "service": "billing",
+        "write": false
+      },
+      "directory.read": {
+        "admin": false,
+        "service": "directory",
+        "write": false
+      },
+      "project.edit": {
+        "admin": false,
+        "service": "project",
+        "write": true
+      },
+      "summary.read": {
+        "admin": false,
+        "service": "project",
+        "write": false
+      }
+    },
+    "scopes": {
+      "editor": [
+        "summary.read",
+        "project.edit"
+      ]
+    },
+    "task": [
+      "billing.read"
+    ]
+  },
+  {
+    "id": "empty_task",
+    "operations": {
+      "billing.read": {
+        "admin": false,
+        "service": "billing",
+        "write": false
+      },
+      "directory.read": {
+        "admin": false,
+        "service": "directory",
+        "write": false
+      },
+      "project.edit": {
+        "admin": false,
+        "service": "project",
+        "write": true
+      },
+      "summary.read": {
+        "admin": false,
+        "service": "project",
+        "write": false
+      }
+    },
+    "scopes": {
+      "organization_reader": [
+        "summary.read",
+        "directory.read",
+        "billing.read"
+      ],
+      "project_editor": [
+        "summary.read",
+        "project.edit"
+      ]
+    },
+    "task": []
+  }
+]
